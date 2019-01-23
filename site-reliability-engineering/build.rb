@@ -15,7 +15,7 @@ FILENAMES.each do |filename|
   title = metadata['title']
   authors = metadata['authors']
 
-  markdown += "\n\n## #{title}\n\n_#{authors.join(' ')}_\n\n#{parts[1]}"
+  markdown += "\n\n## #{title}\n\n_#{authors.join(', ')}_\n\n#{parts[1]}"
 end
 
 body = Kramdown::Document.new(markdown).to_html
